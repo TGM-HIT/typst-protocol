@@ -13,6 +13,8 @@
   finish: [\07. Oktober 2024],
 )
 
+#include "glossaries.typ"
+
 = Einführung
 Diese Protokollvorlage soll helfen den Laborübungsteil entsprechend
 dokumentieren zu können. Diese Vorlage ist in Typst verfasst.
@@ -107,6 +109,25 @@ $ e^(i*pi)+1=0 $
 + Element einer Aufzählung
   + Erstes eingerücktes Element einer Aufzählung
   + Zweites eingerücktes Element einer Aufzählung
+
+== Glossar
+
+Das Glossar enthält Erklärungen von Begriffen und Abkürzen, die im Fließtext keinen Platz haben. In der Datei `glossaries.typ` werden Begriffe -- oder in diesem Fall eine Abkürzung -- in der folgenden Form definiert:
+
+#figure(
+  ```typ
+  #glossary-entry(
+    "ac:tgm",
+    short: "TGM",
+    long: "Technologisches Gewerbemuseum",
+  )
+  ```,
+  caption: [Eintrag einer Abkürzung in `glossaries.typ`],
+)
+
+Verwendet werden kann dieser Glossareintrag ähnlich einer Quellenangabe durch ```typ @ac:tgm```. Bei der ersten Verwendung wird die Langform automatisch auch dargestellt: @ac:tgm. Bei weiteren Verwendungen wird dagegen nur die Kurzform angezeigt: @ac:tgm.
+
+Mit der Funktion ```typc gls()``` kann auch die Langform erzwungen werden: #gls("syt") ist beim ersten mal auch ausgeschrieben, aber hier wird es manuell erwirkt: #gls("syt", long: true).
 
 == Quelltext
 

@@ -1,5 +1,6 @@
 #import "@preview/ccicons:1.0.0": *
 #import "@preview/outrageous:0.2.0"
+#import "glossary.typ": *
 
 #let startPage(
   subject: none,
@@ -121,6 +122,8 @@
     numbering: "1/1",
   )
 
+  #show: make-glossary
+
   #show outline.entry: outrageous.show-entry.with(
     font: (auto,),
   )
@@ -139,13 +142,8 @@
   )
 
   #[
-    #set heading(numbering: none)
-
-    = Glossar TODO
-
-    blabla @wiki:syt
-
-    = Akronyme TODO
+    #set heading(outlined: true, numbering: none)
+    #print-glossary(title: [= Glossar])
   ]
 
   #bibliography(
