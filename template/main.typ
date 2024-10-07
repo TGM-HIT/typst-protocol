@@ -2,7 +2,6 @@
 // #import "@preview/tgm-hit-protocol:0.1.0": *
 
 #show: template(
-
   title: [Protokolle in Typst],
   course: [5AHIT 2024/25],
   subtitle: [Laborprotokoll],
@@ -58,8 +57,8 @@ Wenn man etwas in ein figure packt, dann kann es in einem Abbildungsverzeichnis
 (oder ähnliches) später aufgelistet werden.
 
 #figure(
-    "Auch Text ist möglich!",
-    caption: "Figure mit Text"
+  "Auch Text ist möglich!",
+  caption: [Figure mit Text],
 ) <text-figure>
 
 Man kann ihnen Labels (\<text-figure>) geben, und referenzieren (@text-figure).
@@ -69,7 +68,8 @@ Die folgenden Features können auch ohne figures verwendet werden.
 == Abbildungen
 
 #figure(
-  image("/gallery/logo-right.png", width: 50%), caption: "Mit Beschreibung und Label",
+  image("/gallery/logo-right.png", width: 50%),
+  caption: [Mit Beschreibung und Label],
 )
 
 == Mathe :)
@@ -81,14 +81,21 @@ Die coole Formel: $e^(i*pi)+1=0$
 $ e^(i*pi)+1=0 $
 
 === Figure
-#figure($ e^(i*pi)+1=0 $, caption: "Eulersche Identität")
+#figure(
+  $ e^(i*pi)+1=0 $,
+  caption: [Eulersche Identität],
+)
 
 == Tabellen
 
 #figure(
   table(
-    columns: (1fr, 9fr), table.header([*Header*], [*Kopf*]), [#lorem(2)], [#lorem(10)], [#lorem(2)], [uwu],
-  ), caption: "Tabellen",
+    columns: (1fr, 9fr),
+    table.header([*Header*], [*Kopf*]),
+    [#lorem(2)], [#lorem(10)],
+    [#lorem(2)], [uwu],
+  ),
+  caption: [Tabellen],
 )
 
 == Aufzählung
@@ -103,11 +110,13 @@ $ e^(i*pi)+1=0 $
 
 == Quelltext
 
-#figure(```cpp
+#figure(
+  ```cpp
   #include <iostream>
   int main() {
       // Ich bin ein Kommentar!
       std::cout << "Hello World! :3\n";
   }
   ```,
-  caption: "C++ Code")
+  caption: [C++ Code],
+)

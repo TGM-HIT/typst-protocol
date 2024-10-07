@@ -20,7 +20,7 @@
   )
 
   #v(1fr)
-  
+
   // middle part
   #[
     #set align(center)
@@ -28,7 +28,7 @@
     #text(1.1em)[#subject]
 
     #course
-    
+
     #text(2.5em, weight: "bold")[#title]
 
     #text(1.4em)[#subtitle]
@@ -37,7 +37,7 @@
 
     #datetime.today().display("[day]. [month repr:long] [year]")
   ]
-  
+
   #v(1fr)
 
   // footer table
@@ -46,17 +46,17 @@
     align: (left, left, left, right),
     stroke: none,
     rows: 3,
-  
+
     [Bewertung:],
     [],
     [Version:],
     version,
-  
+
     [Betreuuer:],
     teacher,
     [Begonnen:],
     begin,
-  
+
     [],
     [],
     [Beendet:],
@@ -65,8 +65,6 @@
 
   #v(2cm)
 ]
-
-
 
 #let template(
   title: [Protokolle in Typst],
@@ -78,24 +76,23 @@
   version: [1.1],
   begin: [],
   finish: [],
-
 ) = body => [
   #set heading(numbering: "1.1")
   #set text(lang: "de")
   #show link: set text(fill: blue)
 
   #startPage(
-  subject: subject,
-  course: course,
-  title: title,
-  subtitle: subtitle,
-  author: author,
-  teacher: teacher,
-  version: version,
-  begin: begin,
-  finish: finish,
+    subject: subject,
+    course: course,
+    title: title,
+    subtitle: subtitle,
+    author: author,
+    teacher: teacher,
+    version: version,
+    begin: begin,
+    finish: finish,
   )
-  
+
   // header and footer
   #set page(
     header: {
@@ -104,7 +101,7 @@
         align: (left, center, right),
         inset: (bottom: 0.3em),
         [#title],
-        [#subject], 
+        [#subject],
         [#datetime.today().display("[day]. [month repr:long] [year]")],
         grid.hline(),
       )
@@ -122,45 +119,42 @@
     },
     numbering: "1/1",
   )
-  
+
   #outline(indent: true)
-  
-  
+
   #pagebreak()
 
   #body
 
-#pagebreak(weak: true)
+  #pagebreak(weak: true)
 
-#[
-#set heading(numbering: none)
+  #[
+    #set heading(numbering: none)
 
-= Glossar TODO
+    = Glossar TODO
 
-blabla @wiki:syt
+    blabla @wiki:syt
 
-= Akronyme TODO
-]
+    = Akronyme TODO
+  ]
 
+  #bibliography(
+    "/bibliography.bib",
+    title: [Literaturverzeichnis],
+  )
 
-#bibliography(
-  "/bibliography.bib", 
-  title: [Literaturverzeichnis],
-)
+  #outline(
+    target: figure.where(kind: image),
+    title: [Abbildungsverzeichnis],
+  )
 
+  #outline(
+    target: figure.where(kind: table),
+    title: [Tabellenverzeichnis],
+  )
 
-#outline(
-  target: figure.where(kind: image),
-  title: [Abbildungsverzeichnis],
-)
-
-#outline(
-  target: figure.where(kind: table),
-  title: [Tabellenverzeichnis],
-)
-
-#outline(
-  target: figure.where(kind: raw),
-  title: [Auflistungsverzeichnis],
-)
+  #outline(
+    target: figure.where(kind: raw),
+    title: [Auflistungsverzeichnis],
+  )
 ]
