@@ -1,4 +1,5 @@
 #import "@preview/ccicons:1.0.0": *
+#import "@preview/outrageous:0.2.0"
 
 #let startPage(
   subject: none,
@@ -120,6 +121,10 @@
     numbering: "1/1",
   )
 
+  #show outline.entry: outrageous.show-entry.with(
+    font: (auto,),
+  )
+
   #outline(indent: true)
 
   #pagebreak()
@@ -127,6 +132,11 @@
   #body
 
   #pagebreak(weak: true)
+
+  #show outline.entry: outrageous.show-entry.with(
+    font: (auto,),
+    fill: (align(right, outrageous.repeat(gap: 6pt)[.]),),
+  )
 
   #[
     #set heading(numbering: none)
