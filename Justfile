@@ -28,7 +28,7 @@ update *args:
 
 # package the library into the specified destination folder
 package target:
-  ./scripts/package "{{target}}"
+	./scripts/package "{{target}}"
 
 # install the library with the "@local" prefix
 install: (package "@local")
@@ -38,7 +38,7 @@ install-tgm: (package "@tgm")
 
 [private]
 remove target:
-  ./scripts/uninstall "{{target}}"
+	./scripts/uninstall "{{target}}"
 
 # uninstalls the library from the "@local" prefix
 uninstall: (remove "@local")
