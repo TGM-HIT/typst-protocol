@@ -106,13 +106,13 @@
 /// - date (datetime): The current date, displayed on the title page and in the header.
 /// -> function
 #let template(
-  title: [Protokolle in Typst],
-  course: [5AHIT 2024/25],
-  subtitle: [Laborprotokoll],
-  subject: [Systemtechnik Labor],
-  author: "Simon Gao",
-  teacher: [Clemens Koza],
-  version: [1.1],
+  title: none,
+  course: none,
+  subtitle: none,
+  subject: none,
+  author: none,
+  teacher: none,
+  version: none,
   begin: none,
   finish: none,
   date: datetime.today(),

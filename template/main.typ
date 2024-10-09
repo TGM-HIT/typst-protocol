@@ -4,12 +4,12 @@
 #set text(lang: "de")
 #show: template(
   title: [Protokolle in Typst],
-  course: [5AHIT 2024/25],
+  course: [5xHIT 20yy/yy],
   subtitle: [Laborprotokoll],
   subject: [Systemtechnik Labor],
-  author: "Simon Gao",
-  teacher: [Clemens Koza],
-  version: [1.1],
+  author: "Arthur Dent",
+  teacher: [Michael Borko],
+  version: [1.0],
   begin: parse-date("2024-10-07"),
   finish: parse-date("2024-10-07"),
   date: parse-date("2024-10-09"),
