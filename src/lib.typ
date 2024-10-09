@@ -58,7 +58,7 @@
 
     #author
 
-    #display-date(date)
+    #if date != none { display-date(date) }
   ]
 
   #v(1fr)
@@ -78,12 +78,12 @@
     [#l10n.supervisor:],
     teacher,
     [#l10n.started:],
-    display-date(begin),
+    if begin != none { display-date(begin) },
 
     [],
     [],
     [#l10n.finished:],
-    display-date(finish),
+    if finish != none { display-date(finish) },
   )
 
   #v(2cm)
@@ -118,7 +118,9 @@
   date: datetime.today(),
 ) = body => [
   #set document(
-    author: author,
+    ..if author != none {
+      (author: author)
+    },
     title: title,
     date: date,
   )
@@ -149,9 +151,9 @@
         columns: (1fr, 1fr, 1fr),
         align: (left, center, right),
         inset: (bottom: 0.3em),
-        [#title],
-        [#subject],
-        [#display-date(date)],
+        title,
+        subject,
+        if date != none { display-date(date) },
         grid.hline(),
       )
     },
@@ -162,7 +164,7 @@
         inset: (top: 0.3em),
         grid.hline(),
         [#author #cc-by],
-        [#course],
+        course,
         counter(page).display("1 / 1", both: true),
       )
     },
@@ -195,23 +197,23 @@
 
   #bibliography(
     "/bibliography.bib",
-    title: [#l10n.bibliography],
+    title: l10n.bibliography,
   )
 
   #show outline: set heading(outlined: true)
 
   #outline(
     target: figure.where(kind: image),
-    title: [#l10n.list-of-figures],
+    title: l10n.list-of-figures,
   )
 
   #outline(
     target: figure.where(kind: table),
-    title: [#l10n.list-of-tables],
+    title: l10n.list-of-tables,
   )
 
   #outline(
     target: figure.where(kind: raw),
-    title: [#l10n.list-of-listings],
+    title: l10n.list-of-listings,
   )
 ]
