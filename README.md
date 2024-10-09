@@ -25,4 +25,4 @@ Using the Typst web app, you can create a project by e.g. using this link: https
 
 ## Usage
 
-See the [manual](docs/manual.pdf) for details.
+The template ([rendered PDF](main.pdf)) contains thesis writing advice (in German) as example content. If you are looking for the details of this template package's function, take a look at the [manual](docs/manual.pdf).
