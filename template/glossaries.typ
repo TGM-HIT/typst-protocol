@@ -5,7 +5,7 @@
   "ac:tgm",
   short: "TGM",
   long: "Technologisches Gewerbemuseum",
-  // group: "Accronyms",
+  // group: "Acronyms",
 )
 
 #glossary-entry(
