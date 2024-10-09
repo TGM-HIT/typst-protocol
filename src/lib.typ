@@ -1,6 +1,8 @@
 #import "@preview/ccicons:1.0.0": *
 #import "@preview/datify:0.1.2"
 #import "@preview/outrageous:0.2.0"
+
+#import "assets/mod.typ" as assets
 #import "glossary.typ": *
 #import "l10n.typ"
 
@@ -36,8 +38,8 @@
   #grid(
     columns: (1fr, 1fr),
     align: (left, right),
-    image("/gallery/logo-left.png", width: 3.2cm),
-    image("/gallery/logo-right.png", width: 3.2cm),
+    assets.tgm-logo(width: 3.2cm),
+    assets.just-do-it-logo(width: 3.2cm),
   )
 
   #v(1fr)

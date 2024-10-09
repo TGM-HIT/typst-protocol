@@ -1,4 +1,4 @@
-#import "../src/lib.typ": *
+#import "../src/lib.typ" as tgm-hit-protocol: *
 // #import "@preview/tgm-hit-protocol:0.1.0": *
 
 #set text(lang: "de")
@@ -15,6 +15,7 @@
   date: parse-date("2024-10-09"),
 )
 
+#import "assets/mod.typ" as assets
 #include "glossaries.typ"
 
 = Einführung
@@ -72,7 +73,7 @@ Die folgenden Features können auch ohne figures verwendet werden.
 == Abbildungen
 
 #figure(
-  image("/gallery/logo-right.png", width: 50%),
+  assets.just-do-it-logo(width: 50%),
   caption: [Mit Beschreibung und Label],
 )
 
