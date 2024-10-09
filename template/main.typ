@@ -7,7 +7,7 @@
   course: [5AHIT 2024/25],
   subtitle: [Laborprotokoll],
   subject: [Systemtechnik Labor],
-  author: [Simon Gao],
+  author: "Simon Gao",
   teacher: [Clemens Koza],
   version: [1.1],
   begin: parse-date("2024-10-07"),

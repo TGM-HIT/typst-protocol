@@ -108,13 +108,19 @@
   course: [5AHIT 2024/25],
   subtitle: [Laborprotokoll],
   subject: [Systemtechnik Labor],
-  author: [Simon Gao],
+  author: "Simon Gao",
   teacher: [Clemens Koza],
   version: [1.1],
   begin: none,
   finish: none,
   date: datetime.today(),
 ) = body => [
+  #set document(
+    author: author,
+    title: title,
+    date: date,
+  )
+
   #set heading(numbering: "1.1")
   #show link: set text(fill: blue)
 
