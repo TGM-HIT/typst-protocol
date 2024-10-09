@@ -6,10 +6,9 @@
 #let set-database() = _set_database(toml("l10n.toml"))
 
 #let supervisor = linguify("supervisor")
-
-#let chapter = linguify("chapter")
-#let section = linguify("section")
-#let abstract = linguify("abstract")
+#let rating = linguify("rating")
+#let started = linguify("started")
+#let finished = linguify("finished")
 
 #let figure = linguify("figure")
 #let table = linguify("table")

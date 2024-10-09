@@ -3,10 +3,9 @@ default-lang = "en"
 
 [lang.en]
 supervisor = "Supervisor"
-
-chapter = "Chapter"
-section = "Section"
-abstract = "Abstract"
+rating = "Rating"
+started = "Started"
+finished = "Finished"
 
 figure = "Figure"
 table = "Table"
@@ -21,10 +20,9 @@ glossary = "Glossary"
 
 [lang.de]
 supervisor = "Betreuer"
-
-chapter = "Kapitel"
-section = "Abschnitt"
-abstract = "Kurzfassung"
+rating = "Bewertung"
+started = "Begonnen"
+finished = "Beendet"
 
 figure = "Abbildung"
 table = "Tabelle"

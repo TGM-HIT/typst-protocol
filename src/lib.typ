@@ -50,19 +50,19 @@
     stroke: none,
     rows: 3,
 
-    [Bewertung:],
+    [#l10n.rating:],
     [],
     [Version:],
     version,
 
-    [Betreuuer:],
+    [#l10n.supervisor:],
     teacher,
-    [Begonnen:],
+    [#l10n.started:],
     begin,
 
     [],
     [],
-    [Beendet:],
+    [#l10n.finished:],
     finish,
   )
 
@@ -158,16 +158,16 @@
 
   #outline(
     target: figure.where(kind: image),
-    title: [Abbildungsverzeichnis],
+    title: [#l10n.list-of-figures],
   )
 
   #outline(
     target: figure.where(kind: table),
-    title: [Tabellenverzeichnis],
+    title: [#l10n.list-of-tables],
   )
 
   #outline(
     target: figure.where(kind: raw),
-    title: [Auflistungsverzeichnis],
+    title: [#l10n.list-of-listings],
   )
 ]
