@@ -3,6 +3,14 @@
 #import "glossary.typ": *
 #import "l10n.typ"
 
+#let parse-date(d) = {
+  toml.decode("date = " + d).date
+}
+
+#let display-date(d) = {
+  d.display("[day]. [month repr:long] [year]")
+}
+
 #let startPage(
   subject: none,
   course: none,
@@ -13,6 +21,7 @@
   version: none,
   begin: none,
   finish: none,
+  date: none,
 ) = [
   // header images
   #grid(
@@ -38,7 +47,7 @@
 
     #author
 
-    #datetime.today().display("[day]. [month repr:long] [year]")
+    #display-date(date)
   ]
 
   #v(1fr)
@@ -58,12 +67,12 @@
     [#l10n.supervisor:],
     teacher,
     [#l10n.started:],
-    begin,
+    display-date(begin),
 
     [],
     [],
     [#l10n.finished:],
-    finish,
+    display-date(finish),
   )
 
   #v(2cm)
@@ -77,8 +86,9 @@
   author: [Simon Gao],
   teacher: [Clemens Koza],
   version: [1.1],
-  begin: [],
-  finish: [],
+  begin: none,
+  finish: none,
+  date: datetime.today(),
 ) = body => [
   #set heading(numbering: "1.1")
   #show link: set text(fill: blue)
@@ -96,6 +106,7 @@
     version: version,
     begin: begin,
     finish: finish,
+    date: date,
   )
 
   // header and footer
@@ -107,7 +118,7 @@
         inset: (bottom: 0.3em),
         [#title],
         [#subject],
-        [#datetime.today().display("[day]. [month repr:long] [year]")],
+        [#display-date(date)],
         grid.hline(),
       )
     },

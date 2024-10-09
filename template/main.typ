@@ -10,8 +10,9 @@
   author: [Simon Gao],
   teacher: [Clemens Koza],
   version: [1.1],
-  begin: datetime(year: 2024, month: 10, day: 7).display("[day]. [month repr:long] [year]"),
-  finish: [\07. Oktober 2024],
+  begin: parse-date("2024-10-07"),
+  finish: parse-date("2024-10-07"),
+  date: parse-date("2024-10-09"),
 )
 
 #include "glossaries.typ"
