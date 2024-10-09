@@ -1,5 +1,4 @@
-#import "../src/lib.typ" as tgm-hit-protocol: *
-// #import "@preview/tgm-hit-protocol:0.1.0": *
+#import "@preview/tgm-hit-protocol:0.1.0": *
 
 #set text(lang: "de")
 #show: template(

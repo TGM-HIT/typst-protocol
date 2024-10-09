@@ -6,8 +6,8 @@
 #import "/src/lib.typ" as template
 
 #let package-meta = toml("/typst.toml").package
-#let date = none
-// #let date = datetime(year: ..., month: ..., day: ...)
+// #let date = none
+#let date = datetime(year: 2024, month: 10, day: 9)
 
 #show: project.with(
   title: "TGM HIT protocol template",

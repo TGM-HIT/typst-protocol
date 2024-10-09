@@ -24,7 +24,7 @@
   }
 }
 
-#let startPage(
+#let start-page(
   subject: none,
   course: none,
   title: none,
@@ -135,7 +135,7 @@
   // setup linguify
   #l10n.set-database()
 
-  #startPage(
+  #start-page(
     subject: subject,
     course: course,
     title: title,
