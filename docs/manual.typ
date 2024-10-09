@@ -10,7 +10,7 @@
 // #let date = datetime(year: ..., month: ..., day: ...)
 
 #show: project.with(
-  title: "TGM HIT Protocol template",
+  title: "TGM HIT protocol template",
   // subtitle: "...",
   authors: package-meta.authors.map(a => a.split("<").at(0).trim()),
   abstract: [
