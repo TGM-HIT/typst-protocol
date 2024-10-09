@@ -192,7 +192,7 @@
 
   #[
     #set heading(outlined: true, numbering: none)
-    #print-glossary(title: [= Glossar])
+    #print-glossary(title: [= #l10n.glossary])
   ]
 
   #bibliography(
