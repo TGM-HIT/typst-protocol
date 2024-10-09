@@ -1,4 +1,5 @@
 #import "@preview/ccicons:1.0.0": *
+#import "@preview/datify:0.1.2"
 #import "@preview/outrageous:0.2.0"
 #import "glossary.typ": *
 #import "l10n.typ"
@@ -8,7 +9,15 @@
 }
 
 #let display-date(d) = {
-  d.display("[day]. [month repr:long] [year]")
+  let date-formats = (
+    "en": "Month DD, YYYY",
+    "de": "DD. Month YYYY",
+  )
+  context if text.lang in date-formats {
+    datify.custom-date-format(d, date-formats.at(text.lang), text.lang)
+  } else {
+    date.display()
+  }
 }
 
 #let startPage(
