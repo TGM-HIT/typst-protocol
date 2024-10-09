@@ -13,6 +13,7 @@
   begin: parse-date("2024-10-07"),
   finish: parse-date("2024-10-07"),
   date: parse-date("2024-10-09"),
+  bibliography: bibliography("bibliography.bib"),
 )
 
 #import "assets/mod.typ" as assets

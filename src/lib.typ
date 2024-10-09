@@ -6,6 +6,8 @@
 #import "glossary.typ": *
 #import "l10n.typ"
 
+#let _builtin_bibliography = bibliography
+
 #let parse-date(d) = {
   toml.decode("date = " + d).date
 }
@@ -104,6 +106,7 @@
 /// - begin (datetime): The begin date of the protocol.
 /// - finish (datetime): The finish date of the protocol.
 /// - date (datetime): The current date, displayed on the title page and in the header.
+/// - bibliography (content): The bibliography (```typc bibliography()```) to use for the thesis.
 /// -> function
 #let template(
   title: none,
@@ -116,6 +119,7 @@
   begin: none,
   finish: none,
   date: datetime.today(),
+  bibliography: none,
 ) = body => [
   #set document(
     ..if author != none {
@@ -195,10 +199,14 @@
     #print-glossary(title: [= #l10n.glossary])
   ]
 
-  #bibliography(
-    "/bibliography.bib",
-    title: l10n.bibliography,
-  )
+  #[
+    #set _builtin_bibliography(title: none)
+    #set heading(numbering: none)
+
+    = #l10n.bibliography
+
+    #bibliography
+  ]
 
   #show outline: set heading(outlined: true)
 
