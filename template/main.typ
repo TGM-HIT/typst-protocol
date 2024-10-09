@@ -1,6 +1,7 @@
 #import "../src/lib.typ": *
 // #import "@preview/tgm-hit-protocol:0.1.0": *
 
+#set text(lang: "de")
 #show: template(
   title: [Protokolle in Typst],
   course: [5AHIT 2024/25],

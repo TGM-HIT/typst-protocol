@@ -1,6 +1,7 @@
 #import "@preview/ccicons:1.0.0": *
 #import "@preview/outrageous:0.2.0"
 #import "glossary.typ": *
+#import "l10n.typ"
 
 #let startPage(
   subject: none,
@@ -80,8 +81,10 @@
   finish: [],
 ) = body => [
   #set heading(numbering: "1.1")
-  #set text(lang: "de")
   #show link: set text(fill: blue)
+
+  // setup linguify
+  #l10n.set-database()
 
   #startPage(
     subject: subject,
@@ -148,7 +151,7 @@
 
   #bibliography(
     "/bibliography.bib",
-    title: [Literaturverzeichnis],
+    title: [#l10n.bibliography],
   )
 
   #show outline: set heading(outlined: true)
