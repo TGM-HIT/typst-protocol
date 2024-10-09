@@ -87,6 +87,22 @@
   #v(2cm)
 ]
 
+/// The main template function. Your document will generally start with ```typ #show: template(...)```,
+/// which it already does after initializing the template. Although all parameters are named, most
+/// of them are really mandatory. Parameters that are not given may result in missing content in
+/// places where it is not actually optional.
+///
+/// - subject (content, string): The subject, displayed on the title page, above the course.
+/// - course (content, string): The course, displayed on the title page, above the title.
+/// - title (content, string): The title, displayed on the title page.
+/// - subtitle (content, string): The subtitle, displayed on the title, under the title.
+/// - author (content, string): The author, displayed under the subtitle and in the footer.
+/// - teacher (content, string): The name of the teacher, displayed on the title page.
+/// - version (content, string): The version, displayed on the title page.
+/// - begin (datetime): The begin date of the protocol.
+/// - finish (datetime): The finish date of the protocol.
+/// - date (datetime): The current date, displayed on the title page and in the header.
+/// -> function
 #let template(
   title: [Protokolle in Typst],
   course: [5AHIT 2024/25],
