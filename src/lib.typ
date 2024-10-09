@@ -151,6 +151,8 @@
     title: [Literaturverzeichnis],
   )
 
+  #show outline: set heading(outlined: true)
+
   #outline(
     target: figure.where(kind: image),
     title: [Abbildungsverzeichnis],
