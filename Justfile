@@ -33,8 +33,8 @@ package target:
 # install the library with the "@local" prefix
 install: (package "@local")
 
-# install the library with the "@tgm" prefix (for pre-release testing)
-install-tgm: (package "@tgm")
+# install the library with the "@preview" prefix (for pre-release testing)
+install-preview: (package "@preview")
 
 [private]
 remove target:
@@ -43,8 +43,8 @@ remove target:
 # uninstalls the library from the "@local" prefix
 uninstall: (remove "@local")
 
-# uninstalls the library from the "@tgm" prefix (for pre-release testing)
-uninstall-tgm: (remove "@tgm")
+# uninstalls the library from the "@preview" prefix (for pre-release testing)
+uninstall-preview: (remove "@preview")
 
 # run ci suite
 ci: test doc
