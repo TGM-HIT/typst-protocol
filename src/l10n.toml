@@ -3,7 +3,8 @@ default-lang = "en"
 
 [lang.en]
 supervisor = "Supervisor"
-rating = "Rating"
+grade = "Grade"
+version = "Version"
 started = "Started"
 finished = "Finished"
 
@@ -20,7 +21,8 @@ glossary = "Glossary"
 
 [lang.de]
 supervisor = "Betreuer"
-rating = "Bewertung"
+grade = "Bewertung"
+version = "Version"
 started = "Begonnen"
 finished = "Beendet"
 

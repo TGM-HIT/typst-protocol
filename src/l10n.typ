@@ -6,7 +6,8 @@
 #let set-database() = _set_database(toml("l10n.toml"))
 
 #let supervisor = linguify("supervisor")
-#let rating = linguify("rating")
+#let grade = linguify("grade")
+#let version = linguify("version")
 #let started = linguify("started")
 #let finished = linguify("finished")
 

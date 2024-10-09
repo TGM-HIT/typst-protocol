@@ -68,9 +68,9 @@
     stroke: none,
     rows: 3,
 
-    [#l10n.rating:],
+    [#l10n.grade:],
     [],
-    [Version:],
+    [#l10n.version:],
     version,
 
     [#l10n.supervisor:],
