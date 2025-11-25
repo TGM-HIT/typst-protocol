@@ -7,7 +7,7 @@
   subtitle: [
     A protocol template for students of the HIT department at TGM Wien.
   ],
-  date: datetime(year: 2024, month: 10, day: 9),
+  date: datetime(year: 2025, month: 11, day: 25),
 
   // logo: rect(width: 5cm, height: 5cm),
   // abstract: [
@@ -40,9 +40,24 @@ As a school-specific template, this package does not offer enough configurabilit
 
 = Module reference
 
+== `tgm-hit-protocol`
+
+The template's main module. All functions that need to be called are directly exported from this module.
+
 #module(
   read("/src/lib.typ"),
   name: "tgm-hit-protocol",
+  label-prefix: none,
+  show-module-name: false,
+)
+
+== `tgm-hit-protocol.glossary`
+
+Wrappers for #link("https://typst.app/universe/package/glossarium")[Glossarium] functionality. The #ref-fn("glossary-entry()") and #ref-fn("register-glossary()") functions as well as Glossarium's ```typc gls()``` and ```typc glspl()``` are re-exported from the main module.
+
+#module(
+  read("/src/glossary.typ"),
+  name: "tgm-hit-protocol.glossary",
   label-prefix: none,
   show-module-name: false,
 )
