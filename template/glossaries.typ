@@ -1,4 +1,4 @@
-#import "@preview/tgm-hit-protocol:0.1.0": *
+#import "lib.typ": *
 
 #glossary-entry(
   "ac:tgm",

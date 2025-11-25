@@ -1,4 +1,4 @@
-#import "@preview/tgm-hit-protocol:0.1.0": *
+#import "lib.typ": *
 
 #set text(lang: "de")
 #show: template(
@@ -15,7 +15,6 @@
   bibliography: bibliography("bibliography.bib"),
 )
 
-#import "assets/mod.typ" as assets
 #include "glossaries.typ"
 
 = Einführung
