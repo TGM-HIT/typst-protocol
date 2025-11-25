@@ -4,10 +4,12 @@
 #import "glossary.typ": *
 #import "l10n.typ"
 
-#let _builtin_bibliography = bibliography
-
 #let parse-date(d) = {
-  toml.decode("date = " + d).date
+  let decode = {
+    if sys.version >= version(0, 13, 0) { x => toml(bytes(x)) }
+    else { toml.decode }
+  }
+  decode("date = " + d).date
 }
 
 #let display-date(d) = {
@@ -209,7 +211,7 @@
   ]
 
   #[
-    #set _builtin_bibliography(title: none)
+    #set std.bibliography(title: none)
     #set heading(numbering: none)
 
     = #l10n.bibliography
