@@ -1,6 +1,4 @@
-#import "@preview/ccicons:1.0.0": *
-#import "@preview/datify:0.1.2"
-#import "@preview/outrageous:0.2.0"
+#import "libs.typ": ccicons, datify, outrageous
 
 #import "assets/mod.typ" as assets
 #import "glossary.typ": *
@@ -178,7 +176,7 @@
         align: (left, center, right),
         inset: (top: 0.3em),
         grid.hline(),
-        [#author #cc-by],
+        [#author #ccicons.cc-by],
         course,
         counter(page).display("1 / 1", both: true),
       )
