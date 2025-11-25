@@ -96,29 +96,40 @@
 /// of them are really mandatory. Parameters that are not given may result in missing content in
 /// places where it is not actually optional.
 ///
-/// - subject (content, string): The subject, displayed on the title page, above the course.
-/// - course (content, string): The course, displayed on the title page, above the title.
-/// - title (content, string): The title, displayed on the title page.
-/// - subtitle (content, string): The subtitle, displayed on the title, under the title.
-/// - author (content, string): The author, displayed under the subtitle and in the footer.
-/// - teacher (content, string): The name of the teacher, displayed on the title page.
-/// - version (content, string): The version, displayed on the title page.
-/// - begin (datetime): The begin date of the protocol.
-/// - finish (datetime): The finish date of the protocol.
-/// - date (datetime): The current date, displayed on the title page and in the header.
-/// - bibliography (content): The bibliography (```typc bibliography()```) to use for the thesis.
 /// -> function
 #let template(
-  title: none,
-  course: none,
-  subtitle: none,
+  /// The subject, displayed on the title page, above the course.
+  /// -> content | string
   subject: none,
+  /// The course, displayed on the title page, above the title.
+  /// -> content | string
+  course: none,
+  /// The title, displayed on the title page.
+  /// -> content | string
+  title: none,
+  /// The subtitle, displayed on the title, under the title.
+  /// -> content | string
+  subtitle: none,
+  /// The author, displayed under the subtitle and in the footer.
+  /// -> content | string
   author: none,
+  /// The name of the teacher, displayed on the title page.
+  /// -> content | string
   teacher: none,
+  /// The version, displayed on the title page.
+  /// -> content | string
   version: none,
+  /// The begin date of the protocol.
+  /// -> datetime
   begin: none,
+  /// The finish date of the protocol.
+  /// -> datetime
   finish: none,
+  /// The current date, displayed on the title page and in the header.
+  /// -> datetime
   date: datetime.today(),
+  /// The bibliography (```typc bibliography()```) to use for the thesis.
+  /// -> content
   bibliography: none,
 ) = body => [
   #set document(
