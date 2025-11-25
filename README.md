@@ -1,6 +1,6 @@
 # TGM HIT protocol template
 
-This is a port of the [LaTeX protocol template](https://github.com/TGM-HIT/latex-protocol/) available for students of the information technology department at the TGM technical secondary school in Vienna.
+This is a port of the [LaTeX protocol template](https://github.com/TGM-HIT/latex-protocol/) available for students of the information technology department at the TGM technical secondary school in Vienna!
 
 ## Getting Started
 
