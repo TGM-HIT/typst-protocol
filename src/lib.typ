@@ -178,7 +178,7 @@
         grid.hline(),
         [#author #ccicons.cc-by],
         course,
-        counter(page).display("1 / 1", both: true),
+        context counter(page).display("1 / 1", both: true),
       )
     },
     numbering: "1/1",
@@ -190,7 +190,7 @@
     font: (auto,),
   )
 
-  #outline(indent: true)
+  #outline()
 
   #pagebreak()
 
