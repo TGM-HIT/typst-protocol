@@ -1,4 +1,4 @@
-#import "@preview/tgm-hit-protocol:0.1.0": *
+#import "lib.typ": *
 
 #set text(lang: "de")
 #show: template(
@@ -15,7 +15,6 @@
   bibliography: bibliography("bibliography.bib"),
 )
 
-#import "assets/mod.typ" as assets
 #include "glossaries.typ"
 
 = Einführung
@@ -128,7 +127,7 @@ Das Glossar enthält Erklärungen von Begriffen und Abkürzen, die im Fließtext
   caption: [Eintrag einer Abkürzung in `glossaries.typ`],
 )
 
-Verwendet werden kann dieser Glossareintrag ähnlich einer Quellenangabe durch ```typ @ac:tgm```. Bei der ersten Verwendung wird die Langform automatisch auch dargestellt: @ac:tgm. Bei weiteren Verwendungen wird dagegen nur die Kurzform angezeigt: @ac:tgm.
+Verwendet werden kann dieser Glossareintrag ähnlich einer Quellenangabe durch ```typ @ac:tgm```. Bei der ersten Verwendung wird die Langform automatisch auch dargestellt: @tgm. Bei weiteren Verwendungen wird dagegen nur die Kurzform angezeigt: @tgm.
 
 Mit der Funktion ```typc gls()``` kann auch die Langform erzwungen werden: #gls("syt") ist beim ersten mal auch ausgeschrieben, aber hier wird es manuell erwirkt: #gls("syt", long: true).
 

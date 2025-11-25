@@ -1,15 +1,11 @@
-#import "@preview/ccicons:1.0.0": *
-#import "@preview/datify:0.1.2"
-#import "@preview/outrageous:0.2.0"
+#import "libs.typ": ccicons, datify, outrageous
 
 #import "assets/mod.typ" as assets
 #import "glossary.typ": *
 #import "l10n.typ"
 
-#let _builtin_bibliography = bibliography
-
 #let parse-date(d) = {
-  toml.decode("date = " + d).date
+  toml(bytes("date = " + d)).date
 }
 
 #let display-date(d) = {
@@ -18,7 +14,7 @@
     "de": "DD. Month YYYY",
   )
   context if text.lang in date-formats {
-    datify.custom-date-format(d, date-formats.at(text.lang), text.lang)
+    datify.custom-date-format(d, pattern: date-formats.at(text.lang), lang: text.lang)
   } else {
     date.display()
   }
@@ -178,9 +174,9 @@
         align: (left, center, right),
         inset: (top: 0.3em),
         grid.hline(),
-        [#author #cc-by],
+        [#author #ccicons.cc-by],
         course,
-        counter(page).display("1 / 1", both: true),
+        context counter(page).display("1 / 1", both: true),
       )
     },
     numbering: "1/1",
@@ -192,7 +188,7 @@
     font: (auto,),
   )
 
-  #outline(indent: true)
+  #outline()
 
   #pagebreak()
 
@@ -211,7 +207,7 @@
   ]
 
   #[
-    #set _builtin_bibliography(title: none)
+    #set std.bibliography(title: none)
     #set heading(numbering: none)
 
     = #l10n.bibliography
