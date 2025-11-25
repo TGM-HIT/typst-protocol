@@ -16,7 +16,7 @@
     "de": "DD. Month YYYY",
   )
   context if text.lang in date-formats {
-    datify.custom-date-format(d, date-formats.at(text.lang), text.lang)
+    datify.custom-date-format(d, pattern: date-formats.at(text.lang), lang: text.lang)
   } else {
     date.display()
   }
