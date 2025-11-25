@@ -119,7 +119,7 @@ Das Glossar enthält Erklärungen von Begriffen und Abkürzen, die im Fließtext
 #figure(
   ```typ
   #glossary-entry(
-    "ac:tgm",
+    "tgm",
     short: "TGM",
     long: "Technologisches Gewerbemuseum",
   )
@@ -127,7 +127,7 @@ Das Glossar enthält Erklärungen von Begriffen und Abkürzen, die im Fließtext
   caption: [Eintrag einer Abkürzung in `glossaries.typ`],
 )
 
-Verwendet werden kann dieser Glossareintrag ähnlich einer Quellenangabe durch ```typ @ac:tgm```. Bei der ersten Verwendung wird die Langform automatisch auch dargestellt: @tgm. Bei weiteren Verwendungen wird dagegen nur die Kurzform angezeigt: @tgm.
+Verwendet werden kann dieser Glossareintrag ähnlich einer Quellenangabe durch ```typ @tgm```. Bei der ersten Verwendung wird die Langform automatisch auch dargestellt: @tgm. Bei weiteren Verwendungen wird dagegen nur die Kurzform angezeigt: @tgm.
 
 Mit der Funktion ```typc gls()``` kann auch die Langform erzwungen werden: #gls("syt") ist beim ersten mal auch ausgeschrieben, aber hier wird es manuell erwirkt: #gls("syt", long: true).
 
