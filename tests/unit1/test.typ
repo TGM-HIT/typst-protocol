@@ -1,3 +1,4 @@
 #import "/src/lib.typ" as PACKAGE
 
-Hello World
+// TODO real tests
+#assert(true)
