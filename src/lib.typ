@@ -5,11 +5,7 @@
 #import "l10n.typ"
 
 #let parse-date(d) = {
-  let decode = {
-    if sys.version >= version(0, 13, 0) { x => toml(bytes(x)) }
-    else { toml.decode }
-  }
-  decode("date = " + d).date
+  toml(bytes("date = " + d)).date
 }
 
 #let display-date(d) = {

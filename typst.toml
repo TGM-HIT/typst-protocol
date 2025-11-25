@@ -15,7 +15,7 @@ repository = "https://github.com/TGM-HIT/typst-protocol"
 keywords = ["TGM", "HIT", "protocol", "HTL", "SYT"]
 categories = ["report"]
 disciplines = ["computer-science"]
-compiler = "0.12.0"
+compiler = "0.13.1"
 exclude = [
   ".github",
   "docs",
