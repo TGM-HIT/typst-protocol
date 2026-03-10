@@ -10,13 +10,13 @@
 
 #let display-date(d) = {
   let date-formats = (
-    "en": "Month DD, YYYY",
-    "de": "DD. Month YYYY",
+    "en": "MMMM dd, yyyy",
+    "de": "dd. MMMM yyyy",
   )
   context if text.lang in date-formats {
     datify.custom-date-format(d, pattern: date-formats.at(text.lang), lang: text.lang)
   } else {
-    date.display()
+    d.display()
   }
 }
 
