@@ -14,4 +14,4 @@ typst init @preview/tgm-hit-protocol
 
 ## Usage
 
-The template ([rendered PDF](example.pdf)) contains thesis writing advice (in German) as example content. If you are looking for the details of this template package's function, take a look at the [manual](docs/manual.pdf).
+The template ([rendered PDF](example.pdf)) contains protocol writing advice (in German) as example content. If you are looking for the details of this template package's function, take a look at the [manual](docs/manual.pdf).
