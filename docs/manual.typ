@@ -7,7 +7,7 @@
   subtitle: [
     A protocol template for students of the HIT department at TGM Wien.
   ],
-  date: datetime(year: 2025, month: 11, day: 25),
+  date: datetime(year: 2026, month: 3, day: 23),
 
   // logo: rect(width: 5cm, height: 5cm),
   // abstract: [
