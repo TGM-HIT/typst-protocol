@@ -128,8 +128,8 @@ Verwendet werden kann dieser Glossareintrag ähnlich einer Quellenangabe durch `
 Bei der ersten Verwendung wird die Langform automatisch auch dargestellt: @tgm.
 Bei weiteren Verwendungen wird dagegen nur die Kurzform angezeigt: @tgm.
 
-Mit der Funktion ```typc gls()``` kann auch die Langform erzwungen werden:
-#gls("syt") ist beim ersten mal auch ausgeschrieben, aber hier wird es manuell erwirkt: #gls("syt", long: true).
+Mit einer Referent der Form ```typ @syt:long``` kann auch die Langform erzwungen werden:
+@syt ist beim ersten mal auch ausgeschrieben, aber hier wird es manuell erwirkt: @syt:long.
 
 == Quelltext
 
