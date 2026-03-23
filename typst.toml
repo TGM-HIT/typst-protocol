@@ -5,8 +5,8 @@ name = "tgm-hit-protocol"
 version = "0.2.0"
 entrypoint = "src/lib.typ"
 authors = [
-	"Simon Gao <https://github.com/k1W1M4ng0>",
-	"Clemens Koza <https://github.com/SillyFreak/>",
+  "Simon Gao <https://github.com/k1W1M4ng0>",
+  "Clemens Koza <https://github.com/ensko/>",
 ]
 license = "MIT"
 description = "Protocol template for students of the HIT department at TGM Wien"
